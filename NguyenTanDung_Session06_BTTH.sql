@@ -12,6 +12,9 @@ create table bookings(
     
     constraint chk_tx_status
     check (`status` in ('completed', 'uncompleted'))
+
+	constraint chk_tx_revenue
+	check (revenue > 0)
 );
 
 create table hotels(
